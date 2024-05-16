@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FromServer</title>
+  </head>
+  <body>
+    <!-- <body onload="onLoad()"> -->
+    <div>I am Auth Site</div>
+    <button onclick="buttonClicked()">Take me to Test Site</button>
+    <script>
+      console.log("Auth Page is loaded");
+      function buttonClicked() {
+        console.log("Button Clicked to navigate to Test site");
+        console.log(document.cookie);
+        location.replace("http://gbmlvvcsw5451.rbsres01.net:3002");
+      }
+    </script>
+  </body>
+</html>
