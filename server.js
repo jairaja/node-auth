@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   console.log("Setting fresh cookies");
 
   res.cookie("StrictSecure", "testFromServerStrict", {
-    domain: ".onrender.com:3001",
+    domain: ".onrender.com:443",
     expires: new Date(Date.now() + 900000),
     // domain: ".rbsres01.net",
     // path: "/",
@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   });
   res.cookie("NoneSecure", "testFromServernone", {
     // domain: "https://parentpage.onrender.com/",
-    domain: ".onrender.com:3001",
+    domain: ".onrender.com:443",
     // domain: "localhost",
     expires: new Date(Date.now() + 900000),
     // path: "/",
@@ -37,14 +37,14 @@ app.get("/", (req, res) => {
   res.cookie("LAXSecure", "testFromServerLax", {
     expires: new Date(Date.now() + 900000),
     sameSite: "Lax",
-    domain: ".onrender.com:3001",
+    domain: ".onrender.com:443",
     // domain: "https://parentpage.onrender.com/",
     secure: true,
   });
   res.cookie("StrictNotSecure", "testFromServerStrict", {
     // domain: "localhost",
     expires: new Date(Date.now() + 900000),
-    domain: ".onrender.com:3001",
+    domain: ".onrender.com:443",
     // domain: "https://parentpage.onrender.com/",
     // domain: ".rbsres01.net",
     // path: "/",
@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
     // domain: ".rbsres01.net",
     // domain: "localhost",
     // domain: "https://parentpage.onrender.com/",
-    domain: ".onrender.com:3001",
+    domain: ".onrender.com:443",
     expires: new Date(Date.now() + 900000),
     // path: "/",
     sameSite: "none",
@@ -66,7 +66,7 @@ app.get("/", (req, res) => {
     // domain: "localhost",
     // path: "/",
     // domain: "https://parentpage.onrender.com/",
-    domain: ".onrender.com:3001",
+    domain: ".onrender.com:443",
     expires: new Date(Date.now() + 900000),
     sameSite: "Lax",
     secure: false,
@@ -93,4 +93,4 @@ function getcookie(req) {
   return cookie?.split("; ");
 }
 
-app.listen(3001);
+app.listen(443);
