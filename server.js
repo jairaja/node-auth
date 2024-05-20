@@ -8,7 +8,10 @@ CookieDate.setFullYear(CookieDate.getFullYear() + 10);
 
 app.get("/", (req, res) => {
   //   res.set("Content-Type", "application/json");
-  res.set("Access-Control-Allow-Origin", "*");
+
+  //***** uncomment this
+  // res.set("Access-Control-Allow-Origin", "*");
+  
   // let cookiesTest = document.cookie.split(";");
   // if (cookiesTest && cookiesTest.length > 1) {
   //   console.log(cookiesTest);
@@ -78,7 +81,8 @@ app.get("/", (req, res) => {
 
 app.post("/post", function (req, res) {
   //   console.log(req);
-  res.set("Access-Control-Allow-Origin", "*");
+  //***** uncomment this
+  // res.set("Access-Control-Allow-Origin", "*");
   // res.set("Content-Type", "*");
   console.log("body is ", req.body);
   var cookie = getcookie(req);
