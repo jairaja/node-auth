@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   //   res.set("Content-Type", "application/json");
 
   //***** uncomment this
-  // res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Origin", "*");
   
   // let cookiesTest = document.cookie.split(";");
   // if (cookiesTest && cookiesTest.length > 1) {
@@ -82,7 +82,7 @@ app.get("/", (req, res) => {
 app.post("/post", function (req, res) {
   //   console.log(req);
   //***** uncomment this
-  // res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Origin", "*");
   // res.set("Content-Type", "*");
   console.log("body is ", req.body);
   var cookie = getcookie(req);
